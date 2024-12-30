@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        body {
+            background-image: url('https://www.w3schools.com/w3images/forest.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .box1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .box h3 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .box h3 strike {
+            color: red;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+        .shop-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .shop-btn:hover {
+            background-color: #cc5200;
+        }
+        .order-button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cart-summary {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .cart-summary h4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <!-- Product Boxes -->
+        <div class="box" data-name="Cruz Sectional" data-price="499">
+            <img src="https://embed.widencdn.net/img/cityfurniture/qts19uzorq/1920px/MAR11961-5024-1213-CruzSectionall-HP-ECB-XLG.webp?q=72" alt="Cruz Sectional">
+            <h3>Cruz Sectional $499, <strike>$999</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Palermo Bed" data-price="799">
+            <img src="https://embed.widencdn.net/img/cityfurniture/aefvbx1wai/1080px/MAR11961-5024-1213-PalermoBed-HP-ECB-XLG.webp?q=72" alt="Palermo Bed">
+            <h3>Palermo Bed $799, <strike>$999</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Fremont Table" data-price="199">
+            <img src="https://embed.widencdn.net/img/cityfurniture/p6xm74ywnt/1080px/FREMONT_ECB.webp?q=72" alt="Fremont Table">
+            <h3>Fremont Table $199, <strike>$299</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Nomad Bed" data-price="699">
+            <img src="https://embed.widencdn.net/img/cityfurniture/naax6ejrma/1080px/MAR11961-5024-1213-NomadBed-HP-ECB-XLG.webp?q=72" alt="Nomad Bed">
+            <h3>Nomad Bed $699, <strike>$799</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Easton Sectional" data-price="899">
+            <img src="https://embed.widencdn.net/img/cityfurniture/gqlnjtiy2j/1080px/MAR11961-5024-1213-EastonSectional-HP-ECB-XLG.webp?q=72" alt="Easton Sectional">
+            <h3>Easton Sectional $899, <strike>$999</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Savannah Table" data-price="899">
+            <img src="https://embed.widencdn.net/img/cityfurniture/m3g0cb2wav/1920px/SAVANNAH_ECB.webp?q=72" alt="Savannah Table">
+            <h3>Savannah Table $899, <strike>$999</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Indie Sofa" data-price="499">
+            <img src="https://embed.widencdn.net/img/cityfurniture/bwe0xavdmo/1080px/MAR11961-5024-1213-IndieSofa-HP-ECB-XLG.webp?q=72" alt="Indie Sofa">
+            <h3>Indie Sofa $499, <strike>$599</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="box" data-name="Merrick Table" data-price="399">
+            <img src="https://embed.widencdn.net/img/cityfurniture/lfsjj8rp9e/1080px/MERRICK_ECB.webp?q=72" alt="Merrick Table">
+            <h3>Merrick Table $399, <strike>$499</strike></h3>
+            <button class="shop-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Summary Section -->
+    <div class="cart-summary">
+        <h4>Selected Products</h4>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0.00</p>
+        <p id="discount-price">Discount Price (10% off): $0.00</p>
+        <button class="order-button" onclick="redirectTo('payment.html')">Proceed to Payment</button>
+    </div>
+
+    <script>
+        let cart = [];
+
+        // Add product to cart
+        function addToCart(button) {
+            let box = button.closest('.box');
+            let name = box.getAttribute('data-name');
+            let price = parseFloat(box.getAttribute('data-price'));
+            
+            // Add product to cart
+            cart.push({ name, price });
+
+            updateCart();
+        }
+
+        // Update cart and calculate total
+        function updateCart() {
+            let cartItems = document.getElementById('cart-items');
+            let totalPrice = 0;
+
+            // Clear the cart display
+            cartItems.innerHTML = '';
+
+            // Add each product to the cart display
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItems.appendChild(li);
+                totalPrice += item.price;
+            });
+
+            // Apply discount
+            let discountPrice = totalPrice * 0.90;
+
+            // Update the total price and discount price
+            document.getElementById('total-price').textContent = `Total: $${totalPrice.toFixed(2)}`;
+            document.getElementById('discount-price').textContent = `Discount Price (10% off): $${discountPrice.toFixed(2)}`;
+        }
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

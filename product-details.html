@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Table Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #080611;
+            color: white;
+            font-size: 18px;
+        }
+        td {
+            font-size: 16px;
+        }
+        tr:nth-child(even) {
+            background-color: #dfe6e9;
+        }
+        tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #fdcb6e;
+            font-weight: bold;
+            color: #2d3436;
+        }
+        .order-button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dining Table Information</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="highlight">Material</td>
+                <td>Wood, glass, metal, or plastic.</td>
+            </tr>
+            <tr>
+                <td>Shape</td>
+                <td>Rectangular, square, round, or oval.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Seating Capacity</td>
+                <td>Ranges from 2 to 12 or more, depending on the size.</td>
+            </tr>
+            <tr>
+                <td>Dimensions</td>
+                <td>Varies based on design, with typical sizes like 72"x36" for a 6-seater.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Styles</td>
+                <td>Modern, traditional, rustic, industrial, or minimalist.</td>
+            </tr>
+            <tr>
+                <td>Uses</td>
+                <td>Dining, working, family gatherings, or as a decorative piece.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Price Range</td>
+                <td>From affordable options around $100 to luxury designs over $5000.</td>
+            </tr>
+            <tr>
+                <td>Maintenance</td>
+                <td>Depends on material; e.g., wood needs polishing, glass needs cleaning.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <button type="submit" class="order-button" onclick="location.href='rent.html';">Back</button>
+
+</body>
+</html>

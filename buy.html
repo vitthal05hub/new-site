@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Furniture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #e74c3c;
+        }
+
+        header input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #7f8c8d;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: width 0.3s ease;
+        }
+
+        header input[type="text"]:focus {
+            width: 350px;
+            outline: none;
+            border-color: #e74c3c;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shop-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            font-size: 12px;
+            border: none;
+            border-radius: 5px;}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 1rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .discount {
+            background: url('https://www.zmo.ai/wp-content/uploads/2023/08/ezgif.com-video-to-gif-20.gif') no-repeat center center/cover;
+            background-size: 900px;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .hero {
+            background: url('https://i.gifer.com/7RW.gif') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta-button {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .products {
+            background-color: #f9f9f9;
+            padding: 2rem 1rem;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+        }
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .discount {
+            color: red;
+            font-weight: bold;
+        }
+        .mrp {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .buy-button {
+            display: inline-block;
+            margin-top: 1rem;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .about, .contact {
+            padding: 2rem 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">J.P Furniture</h1>
+            <nav>
+                <input id="search-bar" type="text" placeholder="Search for products, offers">
+                <button id="search-button" class="shop-button">Search</button>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="rent.html">Rent Product</a></li>
+                    <li><a href="history.html">History of JP</a></li>
+                    <li><a href="index.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="product" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to J.P Furniture</h2>
+            <p>Your home, your style. Quality furniture for every space.</p>
+            <a href="all-products.html" class="cta-button">Explore Our Collection</a>
+        </div>
+    </section>
+    <hr>
+    <section id="images">
+        <img width="300" src="https://embed.widencdn.net/img/cityfurniture/lqimjizdwg/1920px/MAR11990-5124-1219-Tempur-Pedic-HP-ECB-XLG.webp?q=72">
+        <img width="300" src="https://embed.widencdn.net/img/cityfurniture/nsmtsj1jkg/1080px/MAR11990-5124-1219-BeautyrestBlack-HP-ECB-XLG.webp?q=72">
+        <img width="300" src="https://embed.widencdn.net/img/cityfurniture/bin9lgyruw/1080px/MAR11990-5124-1219-StearnsFoster-HP-ECB-XLG.webp?q=72">
+        <img width="300" src="https://embed.widencdn.net/img/cityfurniture/jr9ywmfmos/1080px/MAR11990-5124-1219-Serta-HP-ECB-XLG.webp?q=72">
+        <img width="300" src="https://embed.widencdn.net/img/cityfurniture/b9c8tgypjj/1080px/MAR11990-5124-1219-Purple-HP-ECB-XLG.webp?q=72">
+    </section>
+    <hr>
+    <section class="discount">
+        <h2>HOLIDAY SALE</h2>
+        <p>UPTO 20% OFF <br> LIMITED-TIME DEALS</p>
+    </section>
+    <hr>
+    <section id="wall-art">
+        <a href="product-details-1.html">
+            <img width="300" src="https://www.jiomart.com/images/product/original/rvm62nkscq/perpetual-paintings-for-wall-decoration-set-of-5-3d-wall-painting-for-living-room-large-size-with-frames-for-wall-decor-and-home-decoration-hotel-office-75-cm-x-43-cm-g21-product-images-orvm62nkscq-p594616305-1-202210190046.jpg">
+            <img width="300" src="https://5.imimg.com/data5/ANDROID/Default/2020/8/CX/JA/OP/111601397/product-jpeg-500x500.jpg">
+            <img width="400" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfqEbQlHH71PRiGjIPQMihdVnHg9WWYm-wZFWS5D1K9-jPuN0KE7LqLhtKhrih3OCBZMM&usqp=CAU">
+            <img width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Nhiai29PzOv0EkOoBL2zjQFthk7HXyCsEQ&s">
+            <h1>Wall Art</h1>
+        </a>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                At J.P Furniture, we are committed to delivering high-quality furniture that not only enhances the look of your home but also brings comfort and warmth. Our wide range of products includes everything from sofas to beds, all designed with style and functionality in mind.
+            </p>
+            <p>
+                With years of experience in the furniture industry, we pride ourselves on providing our customers with exceptional service, guaranteed quality, and the best prices. Transform your living space with J.P Furniture.
+            </p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For inquiries or customer support, feel free to reach out to us.</p>
+            <p>Email: <a href="mailto:jprantfuruiture@gmail.com">jprantfuruiture@gmail.com</a></p>
+            <p>Phone: +91 123 456 7890</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rent Furniture. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const query = document.getElementById('search-bar').value.trim();
+            if (query) {
+                alert(`You searched for: ${query}`);
+            } else {
+                alert('Please enter a search term.');
+            }
+        });
+    </script>
+</body>
+</html>

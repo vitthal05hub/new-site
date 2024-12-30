@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* Similar styling as the login page for consistency */
+        body {
+            background-image: url('https://w0.peakpx.com/wallpaper/289/779/HD-wallpaper-living-room-wooden-ai-art-furniture.jpg');
+            background-repeat: no-repeat;
+            background-size: 2000px;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .signup-container {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 26px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #007bff;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1><marquee>Welcome</marquee></h1>
+        <h1><mark>J.P Furniture</mark></h1>
+        <h2>Login</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="name">Username</label>
+                <input type="text" id="name" name="name" placeholder="Enter your username">
+                <small class="error-message" id="nameError"></small>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <small class="error-message" id="passwordError"></small>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <div class="login-link">
+                Already have an account? <a href="login.html">Log In</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name');
+            const password = document.getElementById('password');
+            const nameError = document.getElementById('nameError');
+            const passwordError = document.getElementById('passwordError');
+            resetErrors([nameError, passwordError]);
+
+            const validations = [
+                { isValid: validateRequired(name.value), errorElement: nameError, message: 'Username is required.' },
+                { isValid: validateRequired(password.value), errorElement: passwordError, message: 'Password is required.' }
+            ];
+
+            let isValid = true;
+            validations.forEach(validation => {
+                if (!validation.isValid) {
+                    displayError(validation.errorElement, validation.message);
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                const newUser = {
+                    name: name.value.trim(),
+                    password: password.value.trim()
+                };
+                users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('User registered successfully!');
+                window.location.href = 'homepage.html';
+            }
+        });
+
+        function resetErrors(errorElements) {
+            errorElements.forEach(element => element.textContent = '');
+        }
+
+        function displayError(element, message) {
+            element.textContent = message;
+        }
+
+        function validateRequired(value) {
+            return value.trim() !== '';
+        }
+    </script>
+</body>
+</html>

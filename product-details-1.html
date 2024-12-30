@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Art Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffefd5, #ffe4e1);
+            color: #333;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff8a65;
+            color: white;
+            font-size: 1.1em;
+        }
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #fffbf2;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #fff5e6;
+        }
+        tbody tr:hover {
+            background-color: #ffefd5;
+        }
+        .order-button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        caption {
+            font-size: 1.5em;
+            color: #ff6f61;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wall Art Gallery</h1>
+    </header>
+    <table>
+        <caption>Explore Wall Art Styles</caption>
+        <thead>
+            <tr>
+                <th>Type of Wall Art</th>
+                <th>Materials Used</th>
+                <th>Dimensions</th>
+                <th>Style</th>
+                <th>Price Range</th>
+                <th>Common Themes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Canvas Prints</td>
+                <td>Canvas, Acrylic Paint</td>
+                <td>Various Sizes</td>
+                <td>Modern, Abstract</td>
+                <td>$50 - $300</td>
+                <td>Nature, Portraits</td>
+            </tr>
+            <tr>
+                <td>Wooden Panels</td>
+                <td>Wood, Oil Paint</td>
+                <td>Custom Sizes</td>
+                <td>Rustic, Vintage</td>
+                <td>$100 - $500</td>
+                <td>Landscapes, Quotes</td>
+            </tr>
+            <tr>
+                <td>Metal Wall Art</td>
+                <td>Steel, Aluminum</td>
+                <td>Medium to Large</td>
+                <td>Industrial, Minimalist</td>
+                <td>$200 - $1000</td>
+                <td>Geometric Shapes</td>
+            </tr>
+            <tr>
+                <td>Mural Paintings</td>
+                <td>Wall Paint, Spray Paint</td>
+                <td>Custom Wall Sizes</td>
+                <td>Graffiti, Realistic</td>
+                <td>$500 - $5000</td>
+                <td>Cultural, Fantasy</td>
+            </tr>
+            <tr>
+                <td>Framed Prints</td>
+                <td>Paper, Glass Frame</td>
+                <td>Small to Large</td>
+                <td>Classic, Contemporary</td>
+                <td>$30 - $200</td>
+                <td>Photography, Typography</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="submit" class="order-button" onclick="location.href='buy.html';">Back</button>
+</body>
+</html>
